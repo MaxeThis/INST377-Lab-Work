@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lab 5: Max Mendelson </title>
+        
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'/>
+        <link rel='stylesheet' href='styles.css'/>
+    </head>
+    <body>
+        <div class='column is-centered px-6'>
+            <div class='box has-text-black has-background-white is-family-monospace is-size-4 mt-2'>
+                Max Mendelson's Lab 5
+            </div>
+        </div>
+        <div class ='columns is-centered mt-1'>
+            <div class='column is-one-fifth'>
+                <form class="box" action='/api' method='GET'>
+                    <div class="field">
+                        <label class="label">First Name</label>
+                        <div class="control">
+                            <input name ='firstName' class="input is-small" type="text" placeholder=" ">
+                        </div>
+                    </div>
+                
+                    <div class="field">
+                        <label class="label">Food Preference</label>
+                        <div class="control">
+                            <input name='foodPref' class="input is-small" type="text" placeholder=" ">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Veggie of Vegan?</label>
+                        <div class="control">
+                          <label class="radio">
+                            Yes
+                            <input type="radio" name="question">
+                          </label>
+                          <label class="radio">
+                            No
+                            <input type="radio" name="question">
+                          </label>
+                        </div>
+                      </div>
+                
+                    <button class="button is-primary has-background-warning has-text-black">Submit</button>
+                </form>
+            </div>
+
+
+
+            <div class='column is-half my-auto'>
+                <div class='box'>
+                This is going to be something in two weeks.
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <script src="script.js" charset="utf-8"></script> 
+    </body>
+</html>

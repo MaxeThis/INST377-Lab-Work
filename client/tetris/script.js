@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       rotate()
     } else if (e.keyCode === 39 && !endGame && startGame && !pauseGame) {
       moveRight()
-    } else if (e.keyCode === 40&& !endGame && startGame && !pauseGame) {
+    } else if (e.keyCode === 40 && !endGame && startGame && !pauseGame) {
       moveDown()
     }
   }
@@ -192,13 +192,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   startBtn.addEventListener('click', () => {
     startGame = true
-    if (timerId) {
+    if (timerId && !endGame) {
       pauseGame = true
       saveNextRandom = nextRandom
       clearInterval(timerId)
       timerId = null
     } 
-    else if(pauseGame){
+    else if(pauseGame && !endGame){
       //unpause game
       nextRandom = saveNextRandom
       draw()
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
       displayShape()
       pauseGame = false
     }
-    else {
+    else if(!endGame){
       pauseGame = false
       draw()
       timerId = setInterval(moveDown, 1000)
@@ -241,5 +241,4 @@ document.addEventListener('DOMContentLoaded', () => {
       endGame = true
     }
   }
-
 })

@@ -1,0 +1,11 @@
+#mapid {
+    width: 450px; 
+    height: 450px;
+}
+@media only screen and (max-width: 767px) {
+    #mapid{
+        width: 90%;
+        margin:auto
+    }
+
+}
